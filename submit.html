@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/favicon_website_logo.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta&display=swap" rel="stylesheet"> 
+    <title>Diverse Reads</title>
+  </head>
+  <body>
+  
+
+    <a class = "skip" href="#skip">Skip to Main Content</a>
+    <header>
+      <img src="images/website_logo.png" alt="logo" id = "logo">
+      <nav>
+        <ul class="nav_links">
+          <li class="nav_item"><a href="index.html">About</a></li>
+          <li class="nav_item"><a href="books.html">Find Books</a></li>
+          <li class="nav_item"><a href="authors.html">Authors</a></li>
+          <li class="nav_item current"><a href="submit.html">Submit Books</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main class="about" id="skip">
+
+    <div class = "release_box">
+    <h1>New 2021 Releases!</h1>
+    </div>
+    
+    <div class="release">
+      <div class = "onelaststop_text">
+        <h4>One Last Stop</h4>
+        <h4>Casey McQuiston</h4>
+      </div>
+
+      <div class = "onelaststop_image">
+        <img src="images/onelaststop.jpg" alt="Image of One Last Stop Book Cover" id ="cover_img"/>
+      </div>
+
+      <div class = "lastnight_text">
+        <h4>Last Night At the Telegraph Club</h4>
+        <h4>Malinda Lo</h4>
+      </div>
+
+      <div class = "lastnight_image">
+        <img src="images/lastnight.jpg" alt="Image of Last Night At the Telegraph Club Book Cover" id ="cover_img"/>
+      </div>
+
+      <div class = "arsenic_text">
+        <h4>Arsenic and Adobo</h4>
+        <h4>Mia P. Manansala</h4>
+      </div>
+
+      <div class = "arsenic_image">
+        <img src="images/arsenicandadobo.jpg" alt="Image of Arsenic and Adobo Book Cover" id ="cover_img"/>
+      </div>
+
+      <div class = "wings_text">
+        <h4>Wings of Ebony</h4>
+        <h4>J. Elle</h4>
+      </div>
+
+      <div class = "wings_image">
+        <img src="images/wingsofebony.jpg" alt="Image of Wings of Ebony Book Cover" id ="cover_img"/>
+      </div>
+
+      <div class = "pho_text">
+        <h4>A Pho Love Story</h4>
+        <h4>Loan Le</h4>
+      </div>
+
+      <div class = "pho_image">
+        <img src="images/pho.jpg" alt="Image of A Pho Love Story Book Cover" id ="cover_img"/>
+      </div>
+
+    </div>
+  
+
+
+    <div class ="rec">
+    <p>Want to see your favorite diverse book on the site? Go ahead and submit a recommendation and I'll check it out.
+      It would also be incredibly helpful if you mentioned the type of representation in the book so I can file it correctly
+      on our Find Books page! I'm looking for more great books with plus size, mental health, and disabilities representation so 
+      make sure to send them in you have any! Also, I'm super open to more types of representation and going into specifics later 
+      so go ahead and make a note of any specific types of representation you would want a filter for in the description section of
+      the submission form!
+    </p>
+    </div>
+
+    <form action="https://formspree.io/f/xoqpwjng" method="POST">
+      <fieldset>
+        <legend>Submit A Book Recommendation</legend>
+    
+        <label for="name_id">Your Name</label>
+        <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
+    
+        <label for="email_id">Your Email</label>
+        <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
+    
+        <label for="book_title_id">The Book Title</label>
+        <input type="text" name="book_title" placeholder="Enter The Book Title" id = "book_title_id" required>
+        
+        <label for="author_id">The Author</label>
+        <input type="text" placeholder="Enter The Author Name" id = "author_id" name="author" required>
+
+        <label for="rep_id">Representation</label>
+        <input type="text" placeholder="Enter The Representation" id = "rep_id" name="rep" required>
+    
+        <label for="desc">Leave A Description</label>
+        <textarea placeholder="Enter The Description" id = "desc" name="description" required></textarea><br>
+    
+        <input type="checkbox" checked="checked" name="remember" id = "cBox"> 
+        <label for ="cBox">Remember me</label>
+    
+        <input type="submit" value = "Submit">
+      </fieldset>
+     </form>  
+  
+     <div>
+      <a href="#top" class="tops">Back to Top</a> 
+    </div>
+
+    <footer>
+      <img src="images/website_logo.png" alt="logo" id = "logofooter">
+      <p>University of Michigan School of Information <br/>
+        &copy; Lauren Sancya</p>
+      <p>READ DIVERSE STORIES!</p>  
+    </footer>
+  </body>
+</html>
