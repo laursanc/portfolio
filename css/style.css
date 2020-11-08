@@ -229,6 +229,7 @@ nav .nav_item a:focus, .current{
   text-transform: uppercase;
   background-color:#c7594b;
   text-decoration: underline;
+  font-size: larger;
 }
 
 .nav_item li:hover, .nav_item a:focus{
@@ -267,7 +268,7 @@ nav .nav_item a:focus, .current{
 
 .release{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5,auto);
   justify-content: center;
   align-items: center;
