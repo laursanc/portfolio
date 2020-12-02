@@ -255,10 +255,31 @@ nav .nav_item a:focus, .current{
   flex-wrap: wrap;
 }
 
+/*Keyframes for animation*/
+
+.rotate{
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+
+#animation{
+  width: 30vh;
+  padding: 50px;
+}
+
 
 /*submission page*/
 #cover_img{
-  width: 25vh;
+  width: 30vh;
+  padding: 50px
 }
 
 .release_box{
@@ -466,6 +487,7 @@ input[type=submit]:hover {
   
   .main_pic{
     justify-content: space-between;
+    display: -webkit-box;
   }
 
   form{
@@ -493,8 +515,7 @@ input[type=submit]:hover {
 }
 
 
-/*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
 @media screen and (prefers-reduced-motion: reduce) {
-  #MixItUpB06622 {animation: none;}
+  #animation {animation: none;}
 }
