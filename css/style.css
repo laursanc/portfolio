@@ -257,9 +257,6 @@ nav .nav_item a:focus, .current{
 
 /*Keyframes for animation*/
 
-.rotate{
-  animation: rotation 8s infinite linear;
-}
 
 @keyframes rotation{
   from{
@@ -270,9 +267,16 @@ nav .nav_item a:focus, .current{
   }
 }
 
+.rotate{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #animation{
-  width: 30vh;
-  padding: 50px;
+  width: 150px;
+  animation: rotation 8s infinite linear;
+  padding: 20px;
 }
 
 
