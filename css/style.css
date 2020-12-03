@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body{
   font-family: 'Mukta', sans-serif; 
   margin: 0;
@@ -28,16 +35,24 @@ h3{
 }
 
 .all_books{
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto;
   grid-template-columns: auto;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-gap: 15px;
 }
 .container{
   margin: 10px;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto;
   grid-template-columns: auto;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   grid-gap: 15px;
 }
 
@@ -86,9 +101,14 @@ h3{
 }
 
 .filter_container{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 p {
@@ -113,7 +133,9 @@ p {
 
 /*author page grid*/
 .grid{
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: 1.25fr 15px 1fr 15px 1fr;
   grid-template-rows: 1.25fr 1fr 1fr;
   position: relative;
   text-align: center;
@@ -143,6 +165,7 @@ a.skip{
   position: absolute;
   top: -40px;
   -webkit-transition: top 1s ease-out;
+  -o-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
 }
@@ -150,13 +173,18 @@ a.skip{
 a.skip:focus{
   top:20px;
   color: black;
-  text-decoration-style: solid;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
 }
 
 .videobox{
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   padding: 10px;
 }
@@ -182,18 +210,29 @@ a.skip:focus{
   color: white;
   text-align: center;
   padding: 14px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.75em;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer{
   background-color:blueviolet ;
   color: white;
   padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #logo{
@@ -207,74 +246,100 @@ footer{
 }
 
 /*flipcard*/
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
+
+ .flip-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
-  border: 1px solid #f1f1f1;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  -webkit-perspective: 1000px;
+          perspective: 1000px; 
   text-align: center;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  -o-transition: transform 0.8s;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: blueviolet;
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: blueviolet;
   color: white;
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   text-align: center;
+}  
+.lit{
+  padding-top: 40px;
 }
 
 /* Navbar */
 header{
   background:blueviolet;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 
 }
 
 nav{
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav_links{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav_item{
@@ -315,40 +380,66 @@ nav .nav_item a:focus, .current{
 }
 
 .main_pic{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /*Keyframes for animation*/
 
 
-@keyframes rotation{
+@-webkit-keyframes rotation{
   from{
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to{
-    transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+
+@keyframes rotation{
+  from{
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to{
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 
 .rotate{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #animation{
   width: 150px;
-  animation: rotation 8s infinite linear;
+  -webkit-animation: rotation 8s infinite linear;
+          animation: rotation 8s infinite linear;
   padding: 20px;
 }
 
 
 /*submission page*/
 #cover_img{
-  width: 30vh;
-  padding: 50px
+  width: 25vh;
 }
 
 .release_box{
@@ -357,16 +448,74 @@ nav .nav_item a:focus, .current{
 }
 
 .release{
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (auto)[5];
   grid-template-rows: repeat(5,auto);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   padding-top: 15px;
 }
 
+.release > *:nth-child(1){
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.release > *:nth-child(2){
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.release > *:nth-child(3){
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.release > *:nth-child(4){
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.release > *:nth-child(5){
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.release > *:nth-child(6){
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.release > *:nth-child(7){
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+}
+
+.release > *:nth-child(8){
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+}
+
+.release > *:nth-child(9){
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.release > *:nth-child(10){
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+}
+
 .onelaststop_text{
+  -ms-grid-column: 1;
   grid-column: 1;
   padding: 10px;
   padding: 10px;
@@ -378,6 +527,7 @@ nav .nav_item a:focus, .current{
 }
 
 .lastnight_text{
+  -ms-grid-column: 2;
   grid-column: 2;
   padding: 10px;
   padding: 10px;
@@ -389,6 +539,7 @@ nav .nav_item a:focus, .current{
 }
 
 .arsenic_text{
+  -ms-grid-column: 1;
   grid-column: 1;
   padding: 10px;
   padding: 10px;
@@ -400,6 +551,7 @@ nav .nav_item a:focus, .current{
 }
 
 .wings_text{
+  -ms-grid-column: 2;
   grid-column: 2;
   padding: 10px;
   padding: 10px;
@@ -411,6 +563,7 @@ nav .nav_item a:focus, .current{
 }
 
 .pho_text{
+  -ms-grid-column: 1;
   grid-column: 1;
   padding: 10px;
   padding: 10px;
@@ -464,7 +617,8 @@ input {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 span{
   margin-left:20%;
@@ -480,7 +634,8 @@ textarea{
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 
@@ -510,21 +665,41 @@ input[type=submit]:hover {
 
   /* Navbar */
   header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between; 
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; 
   }
 
   nav{
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 
   .nav_links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 
   .nav_item a:hover, .nav_item a:focus{
@@ -555,7 +730,9 @@ input[type=submit]:hover {
   }
   
   .main_pic{
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }  
 
   form{
@@ -583,13 +760,16 @@ input[type=submit]:hover {
 }
 
 
+
 /*Add media query to handle reduced-motion*/
 @media screen and (prefers-reduced-motion: reduce) {
-  #animation {animation: none;}
+  #animation {-webkit-animation: none;animation: none;}
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
   .mix{
+    -webkit-transition: none !important;
+    -o-transition: none !important;
     transition: none !important;
   }
 }
