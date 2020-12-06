@@ -26,6 +26,66 @@ h2{
   padding: 5px;
 }
 
+/*Imagegrid*/
+.flex {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.flex-item {
+  width: 25em;
+  height: 1fr;
+  overflow: hidden;    
+}
+
+.hvrbox,
+.hvrbox * {
+box-sizing: border-box;
+}
+.hvrbox {
+position: relative;
+display: inline-block;
+overflow: hidden;
+max-width: 100%;
+height: auto;
+}
+.hvrbox img {
+max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+display: block;
+}
+.hvrbox .hvrbox-layer_top {
+opacity: 0;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 99%;
+background: rgba(0, 0, 0, 0.6);
+color: #fff;
+transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+opacity: 1;
+}
+.hvrbox .hvrbox-text {
+text-align: center;
+font-size: 18px;
+display: inline-block;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
 /*Gallery*/
 h3{
   text-align: center;
@@ -129,6 +189,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 
 /*author page grid*/
@@ -244,6 +305,7 @@ footer{
   padding: 10px;
 
 }
+
 
 /*flipcard*/
 
@@ -661,7 +723,7 @@ input[type=submit]:hover {
 
 
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 800px){
 
   /* Navbar */
   header{
@@ -757,7 +819,40 @@ input[type=submit]:hover {
     line-height: 25vh;
     vertical-align:top;
  }
+
+ /*imagegrid*/
+ .flex {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-flow: row wrap;
+  align-items: center;
 }
+
+.flex-item {
+  width: 12em;
+  height: 1fr;
+  overflow: hidden;    
+}
+ 
+}
+
+@media all and (min-width: 600px){
+  .flex {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+.flex-item {
+    width: 12em;
+    height: 1fr;
+    overflow: hidden;    
+  }
+}
+
 
 
 
