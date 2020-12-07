@@ -94,7 +94,7 @@ h3{
   font-size: 1.25em;
 }
 
-.all_books{
+ .all_books{
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -104,6 +104,7 @@ h3{
           justify-content: center;
   grid-gap: 15px;
 }
+
 .container{
   margin: 10px;
   display: -ms-grid;
@@ -114,7 +115,8 @@ h3{
       -ms-flex-pack: center;
           justify-content: center;
   grid-gap: 15px;
-}
+} 
+
 
 .container h4{
   margin-top: 10px;
@@ -436,6 +438,8 @@ nav .nav_item a:focus, .current{
   background-color:#c7594b;
 }
 
+
+
 .main_pic>img{
   width: 25vw;
   height: auto;
@@ -720,10 +724,110 @@ input[type=submit] {
 input[type=submit]:hover {
   opacity: 0.8;
 }
+ 
 
 
+@media screen and (min-width: 600px){
+  .flex {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+.flex-item {
+    width: 12em;
+    height: 1fr;
+    overflow: hidden;    
+  }
+  header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; 
+  }
+
+  .nav_links{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+ nav{
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 15px;
+    height: 95vh;
+    overflow: scroll;
+  }
+
+  .all_books{
+    grid-template-columns: repeat(2,auto);
+  }
+  .all_books div{
+    height: 95vh;
+    overflow: scroll;
+  }
+  .author{    
+    height: 95vh;
+    overflow: scroll;
+  }
+}
 
 @media screen and (min-width: 800px){
+  .container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 15px;
+    height: 95vh;
+    overflow: scroll;
+  } 
+
+  .all_books div{
+    height: 95vh;
+    overflow: scroll;
+  }
+
+  .all_books{
+    grid-template-columns: repeat(3,auto);
+  }
+
+  .author{    
+    height: 95vh;
+    overflow: scroll;
+  }
 
   /* Navbar */
   header{
@@ -834,25 +938,6 @@ input[type=submit]:hover {
   height: 1fr;
   overflow: hidden;    
 }
- 
-}
-
-@media all and (min-width: 600px){
-  .flex {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    flex-flow: row wrap;
-    align-items: center;
-  }
-  
-.flex-item {
-    width: 12em;
-    height: 1fr;
-    overflow: hidden;    
-  }
-}
-
 
 
 
