@@ -207,7 +207,7 @@ p {
   padding: 10px;
 }
 
-#author_pic{
+.author_pic{
   width: 25vh;
   display: block;
   margin-left: auto;
