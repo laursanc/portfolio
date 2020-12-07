@@ -803,6 +803,11 @@ input[type=submit]:hover {
 }
 
 @media screen and (min-width: 800px){
+  #logofooter{
+    width: 15vw;
+    padding: 10px;
+  
+  }
   .container{
     margin: 10px;
     display: grid;
