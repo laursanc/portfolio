@@ -499,7 +499,7 @@ nav .nav_item a:focus, .current{
 
 
 /*submission page*/
-#cover_img{
+.cover_img{
   width: 25vh;
 }
 
